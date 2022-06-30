@@ -1,0 +1,72 @@
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 90vh;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(56, 56, 56);
+}
+
+.container h1 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.container form{
+    display: flex;
+    flex-direction: column;
+}
+.container form p,
+.container form input{
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.container input{
+    padding: 5px 0;
+    width: 20em;
+}
+
+.container form button[disabled] {
+    background-color: rgb(106, 106, 107);
+    cursor: not-allowed;
+}
+
+.container form button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    margin-bottom: 2em;
+    flex-direction: column;
+    padding: 8px;
+    border: none;
+
+    width: 20em;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bolder;
+    color: #fff;
+    background-color: rgb(88, 88, 184);
+    cursor: pointer;
+}
+
+.register p,
+.register button {
+    display: flex;
+    justify-content: center;
+}
+
+.register button {
+    margin: 0 auto;
+    margin-top: 10px;
+    padding: 8px;
+    border: none;
+
+    width: 20em;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bolder;
+    color: #fff;
+    background-color: rgb(33, 107, 33);
+    cursor: pointer;
+}
