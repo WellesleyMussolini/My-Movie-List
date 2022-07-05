@@ -4,8 +4,8 @@ import Card from "@mui/material/Card";
 
 export const CardWrapper = styled(Card)({
   maxWidth: "345px",
-  height: "450px",
-
+  maxHeight: "450px",   
+  
   display: "flex",
   justifyContent: "center",
   alignItens: "center",
