@@ -1,8 +1,8 @@
 import React from "react";
+import Box from "@mui/material/Box";
 import Drawer from "@mui/material/Drawer";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
-import Box from "@mui/material/Box";
 
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
@@ -13,7 +13,7 @@ import LaptopChromebookIcon from "@mui/icons-material/LaptopChromebook";
 import PhoneIphoneIcon from "@mui/icons-material/PhoneIphone";
 
 //Styles
-import { ListItemButtonStyled, AccountIconDiv, AccountIcon } from "./sidebar.styles";
+import { ListItemButtonStyled, HeaderSidebar, AccountIcon } from "./sidebar.styles";
 
 export default function Sidebar({ openSidebar, handleClose }) {
   const itensSidebar = [
@@ -39,9 +39,9 @@ export default function Sidebar({ openSidebar, handleClose }) {
     <Drawer open={openSidebar} onClick={handleClose}>
       <Box role="presentation">
         <List>
-          <AccountIconDiv>
+          <HeaderSidebar>
             <AccountIcon />
-          </AccountIconDiv>
+          </HeaderSidebar>
           {itensSidebar.map((item, index) => (
             <ListItem key={index} disablePadding>
               <ListItemButtonStyled>
