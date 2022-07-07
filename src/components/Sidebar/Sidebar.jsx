@@ -13,7 +13,7 @@ import LaptopChromebookIcon from "@mui/icons-material/LaptopChromebook";
 import PhoneIphoneIcon from "@mui/icons-material/PhoneIphone";
 
 //Styles
-import { ListItemButtonStyled } from "./sidebar.styles";
+import { ListItemButtonStyled, HeaderSidebar, AccountIcon } from "./sidebar.styles";
 
 export default function Sidebar({ openSidebar, handleClose }) {
   const itensSidebar = [
@@ -39,6 +39,9 @@ export default function Sidebar({ openSidebar, handleClose }) {
     <Drawer open={openSidebar} onClick={handleClose}>
       <Box role="presentation">
         <List>
+          <HeaderSidebar>
+            <AccountIcon />
+          </HeaderSidebar>
           {itensSidebar.map((item, index) => (
             <ListItem key={index} disablePadding>
               <ListItemButtonStyled>
