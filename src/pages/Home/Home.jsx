@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import ProductCard from "../../components/Card/Product-Card";
 import Sidebar from "../../components/Sidebar/Sidebar";
-import { Header, HamburguerIcon, SearchContainer, InputText, SearchIconStyled, Wrapper } from "./home.styles";
+import { Header, HamburguerIcon, Wrapper } from "./home.styles";
+import InputSearch from "../../components/Input-search/Input-search";
 
 function Home() {
   const [openSidebar, setOpenSidebar] = useState(false);
-
+  const [searchField, setSearchField] = useState("");
   return (
     <>
       <Header>
@@ -14,10 +15,7 @@ function Home() {
           openSidebar={openSidebar}
           handleClose={() => setOpenSidebar(false)}
         />
-        <SearchContainer>
-          <InputText type="search" placeholder="search..." />
-          <SearchIconStyled />
-        </SearchContainer>
+      <InputSearch handleOnChange={event => setSearchField(event.target.value)} textField={searchField} />
       </Header>
       <Wrapper>
         <ProductCard
