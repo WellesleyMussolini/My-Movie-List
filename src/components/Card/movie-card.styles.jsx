@@ -1,7 +1,6 @@
 import { styled } from "@mui/system";
 import CardMedia from "@mui/material/CardMedia";
 import Card from "@mui/material/Card";
-
 import { Box } from "@mui/material";
 
 export const BoxWrapper = styled(Box)({
