@@ -6,6 +6,7 @@ import { Box } from "@mui/material";
 export const BoxWrapper = styled(Box)({
   Width: "345px",
   Height: "450px",
+  cursor: "pointer",
 });
 
 export const CardWrapper = styled(Card)({

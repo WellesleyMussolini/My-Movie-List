@@ -6,12 +6,12 @@ import { Theme } from "./theme/Theme.styled";
 
 const App = () => {
   return (
-    <Theme>
-      <Routes>
-        <Route path={Routers.HOME} element={<Home />} exact />
-        <Route path={Routers.LOGIN} element={<Login />} />
-      </Routes>
-    </Theme>
+      <Theme>
+        <Routes>
+          <Route path={Routers.HOME} element={<Home />} exact />
+          <Route path={Routers.LOGIN} element={<Login />} />
+        </Routes>
+      </Theme>
   );
 };
 
