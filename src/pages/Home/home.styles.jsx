@@ -27,6 +27,11 @@ export const ListWrapper = styled(Box)({
   gridTemplateColumns: "1fr 1fr 1fr",
 });
 
+export const Movie = styled(Box)({
+  marginRight: "30px",
+  marginTop: "30px",
+});
+
 export const H1 = styled(Typography)({
   fontWeight: 800,
   fontSize: "1.5em",
