@@ -7,10 +7,9 @@ import ListItem from "@mui/material/ListItem";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
 
-import HomeIcon from "@mui/icons-material/Home";
-import DesktopMacIcon from "@mui/icons-material/DesktopMac";
-import LaptopChromebookIcon from "@mui/icons-material/LaptopChromebook";
-import PhoneIphoneIcon from "@mui/icons-material/PhoneIphone";
+import VideocamIcon from '@mui/icons-material/Videocam';
+import LocalMoviesIcon from '@mui/icons-material/LocalMovies';
+import ReceiptLongIcon from '@mui/icons-material/ReceiptLong';
 
 //Styles
 import { ListItemButtonStyled, HeaderSidebar, AccountIcon } from "./sidebar.styles";
@@ -18,20 +17,16 @@ import { ListItemButtonStyled, HeaderSidebar, AccountIcon } from "./sidebar.styl
 export default function Sidebar({ openSidebar, handleClose }) {
   const itensSidebar = [
     {
-      label: "Página Inicial",
-      icon: <HomeIcon />,
+      label: "Filmes",
+      icon: <VideocamIcon />,
     },
     {
-      label: "Computadores",
-      icon: <DesktopMacIcon />,
+      label: "Meus Filmes",
+      icon: <ReceiptLongIcon />,
     },
     {
-      label: "Celulares",
-      icon: <LaptopChromebookIcon />,
-    },
-    {
-      label: "Notebooks",
-      icon: <PhoneIphoneIcon />,
+      label: "Lançamentos",
+      icon: <LocalMoviesIcon />,
     },
   ];
 

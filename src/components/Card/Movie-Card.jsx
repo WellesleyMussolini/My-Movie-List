@@ -5,21 +5,21 @@ import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 
 //Styles
-import { CardImage, CardWrapper, BoxWrapper } from "./product-card.styles";
+import { CardImage, CardWrapper, BoxWrapper } from "./movie-card.styles";
 
-export default function ProductCard({ imgSrc, imgAlt, productName }) {
+export default function MovieCard({ imgSrc, imgAlt, movieName }) {
   return (
     <BoxWrapper>
       <CardWrapper>
         <CardImage component="img" image={imgSrc} alt={imgAlt} />
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
-            {productName}
+            {movieName}
           </Typography>
         </CardContent>
         <CardActions>
-          <Button size="small">Adicionar aos favoritos</Button>
-          <Button size="small">Comprar</Button>
+          <Button size="medium">Adicionar a minha lista</Button>
+          <Button size="medium">Sinopse</Button>
         </CardActions>
       </CardWrapper>
     </BoxWrapper>

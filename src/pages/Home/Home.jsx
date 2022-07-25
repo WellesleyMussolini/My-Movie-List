@@ -1,34 +1,74 @@
-import React, { useState } from "react";
-import ProductCard from "../../components/Card/Product-Card";
+import React, { useState, useEffect } from "react";
+import MovieCard from "../../components/Card/Movie-Card";
 import Sidebar from "../../components/Sidebar/Sidebar";
-import { HamburguerIcon, Wrapper } from "./home.styles";
+import { PageContainer, Header, HamburguerIcon, Wrapper, ListWrapper, EmptyContainer } from "./home.styles";
+import InputSearch from "../../components/Input-search/Input-search";
+import { filterList } from "../../utils/filter-list";
 
 function Home() {
   const [openSidebar, setOpenSidebar] = useState(false);
+  const [searchField, setSearchField] = useState("");
+  const [movieList, setMovieList] = useState([]);
+
+  useEffect(() => {
+    const movieCatalog = [
+      {
+        img: "https://wallpaperaccess.com/full/442474.jpg",
+        alt: "Batman",
+        name: "Batman: O Cavaleiro das Trevas - 2008",
+      },
+      {
+        img: "https://wallpaperaccess.com/full/442474.jpg",
+        alt: "Batman",
+        name: "Batman: O Cavaleiro das Trevas - 2008",
+      },
+      {
+        img: "https://wallpaperaccess.com/full/442474.jpg",
+        alt: "Batman",
+        name: "Batman: O Cavaleiro das Trevas - 2008",
+      },
+      {
+        img: "https://wallpaperaccess.com/full/442474.jpg",
+        alt: "Batman",
+        name: "Batman: O Cavaleiro das Trevas - 2008",
+      },
+    ];
+    setMovieList(movieCatalog);
+  }, []);
+
+  const filteredMovies = filterList(searchField, movieList);
 
   return (
     <>
-      <HamburguerIcon onClick={() => setOpenSidebar(true)} />
-      <Sidebar
-        openSidebar={openSidebar}
-        handleClose={() => setOpenSidebar(false)}
-      />
+      <Header>
+        <HamburguerIcon onClick={() => setOpenSidebar(true)} />
+        <Sidebar
+          openSidebar={openSidebar}
+          handleClose={() => setOpenSidebar(false)}
+        />
+        <InputSearch handleOnChange={event => setSearchField(event.target.value)} textField={searchField} />
+      </Header>
       <Wrapper>
-        <ProductCard
-          imgSrc="https://a-static.mlcdn.com.br/800x560/imac-27-apple-intel-core-i5-8gb-512gb-ssd-prateado/magazineluiza/226883300/b71738733735f8968100cbe86f589b30.jpg"
-          imgAlt="Imac"
-          productName="iMac 27” Apple Intel Core i5 8GB 512GB SSD - Prateado"
-        />
-        <ProductCard
-          imgSrc="https://a-static.mlcdn.com.br/800x560/imac-27-apple-intel-core-i5-8gb-512gb-ssd-prateado/magazineluiza/226883300/b71738733735f8968100cbe86f589b30.jpg"
-          imgAlt="Imac"
-          productName="iMac 27” Apple Intel Core i5 8GB 512GB SSD - Prateado"
-        />
-        <ProductCard
-          imgSrc="https://a-static.mlcdn.com.br/800x560/imac-27-apple-intel-core-i5-8gb-512gb-ssd-prateado/magazineluiza/226883300/b71738733735f8968100cbe86f589b30.jpg"
-          imgAlt="Imac"
-          productName="iMac 27” Apple Intel Core i5 8GB 512GB SSD - Prateado"
-        />
+        {
+          filteredMovies.length === 0
+            ?
+            <EmptyContainer>Ops... Nenhum resultado foi encontrado...</EmptyContainer>
+            :
+            <ListWrapper>
+              {
+                filteredMovies.map((movie, index) => {
+                  return (
+                    <MovieCard
+                      key={index}
+                      imgSrc={movie.img}
+                      imgAlt={movie.alt}
+                      movieName={movie.name}
+                    />
+                  )
+                })
+              }
+            </ListWrapper>
+        }
       </Wrapper>
     </>
   );
