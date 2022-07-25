@@ -18,7 +18,7 @@ export const CardWrapper = styled(Card)({
   alignItens: "center",
   flexDirection: "column",
 
-  boxShadow: "1px 0px 15px 4px rgba(0,0,0,0.45)",
+  boxShadow: "1px 0px 5px 4px rgba(0,0,0,0.45)",
 
   padding: "10px",
 });
