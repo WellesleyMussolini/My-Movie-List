@@ -1,6 +1,6 @@
 import { Container, styled } from "@mui/system";
 import Box from "@mui/material/Box";
-import Typography from '@mui/material/Typography';
+import Typography from "@mui/material/Typography";
 import MenuIcon from "@mui/icons-material/Menu";
 
 export const Header = styled(Box)({
@@ -29,12 +29,12 @@ export const Wrapper = styled(Container)({
 export const ListWrapper = styled(Box)({
   display: "grid",
   gridTemplateColumns: "1fr 1fr 1fr",
-  gap: "25px"
+  gap: "25px",
 });
 
 export const EmptyContainer = styled(Typography)({
   fontWeight: 800,
   fontSize: "1.5em",
   textTransform: "uppercase",
-  color: "#7a7a7add"
+  color: "#7a7a7add",
 });

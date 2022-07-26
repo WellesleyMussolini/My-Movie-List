@@ -1,7 +1,15 @@
 import React, { useState, useEffect } from "react";
 import MovieCard from "../../components/Card/Movie-Card";
 import Sidebar from "../../components/Sidebar/Sidebar";
-import { PageContainer, Header, HamburguerIcon, Wrapper, ListWrapper, EmptyContainer } from "./home.styles";
+import {
+  PageContainer,
+  Header,
+  HamburguerIcon,
+  Wrapper,
+  ListWrapper,
+  EmptyContainer,
+  Animation,
+} from "./home.styles";
 import InputSearch from "../../components/Input-search/Input-search";
 import { filterList } from "../../utils/filter-list";
 
@@ -46,29 +54,30 @@ function Home() {
           openSidebar={openSidebar}
           handleClose={() => setOpenSidebar(false)}
         />
-        <InputSearch handleOnChange={event => setSearchField(event.target.value)} textField={searchField} />
+        <InputSearch
+          handleOnChange={(event) => setSearchField(event.target.value)}
+          textField={searchField}
+        />
       </Header>
       <Wrapper>
-        {
-          filteredMovies.length === 0
-            ?
-            <EmptyContainer>Ops... Nenhum resultado foi encontrado...</EmptyContainer>
-            :
-            <ListWrapper>
-              {
-                filteredMovies.map((movie, index) => {
-                  return (
-                    <MovieCard
-                      key={index}
-                      imgSrc={movie.img}
-                      imgAlt={movie.alt}
-                      movieName={movie.name}
-                    />
-                  )
-                })
-              }
-            </ListWrapper>
-        }
+        {filteredMovies.length === 0 ? (
+          <EmptyContainer>
+            Ops... Nenhum resultado foi encontrado...
+          </EmptyContainer>
+        ) : (
+          <ListWrapper>
+            {filteredMovies.map((movie, index) => {
+              return (
+                  <MovieCard
+                    key={index}
+                    imgSrc={movie.img}
+                    imgAlt={movie.alt}
+                    movieName={movie.name}
+                  />
+              );
+            })}
+          </ListWrapper>
+        )}
       </Wrapper>
     </>
   );
