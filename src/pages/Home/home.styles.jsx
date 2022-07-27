@@ -15,12 +15,12 @@ export const Wrapper = styled(Container)({
 export const ListWrapper = styled(Box)({
   display: "grid",
   gridTemplateColumns: "1fr 1fr 1fr",
-  gap: "25px"
+  gap: "25px",
 });
 
 export const EmptyContainer = styled(Typography)({
   fontWeight: 800,
   fontSize: "1.5em",
   textTransform: "uppercase",
-  color: "#7a7a7add"
+  color: "#7a7a7add",
 });

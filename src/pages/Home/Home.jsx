@@ -40,26 +40,24 @@ function Home() {
     <>
       <Header />
       <Wrapper>
-        {
-          filteredMovies.length === 0
-            ?
-            <EmptyContainer>Ops... Nenhum resultado foi encontrado...</EmptyContainer>
-            :
-            <ListWrapper>
-              {
-                filteredMovies.map((movie, index) => {
-                  return (
-                    <MovieCard
-                      key={index}
-                      imgSrc={movie.img}
-                      imgAlt={movie.alt}
-                      movieName={movie.name}
-                    />
-                  )
-                })
-              }
-            </ListWrapper>
-        }
+        {filteredMovies.length === 0 ? (
+          <EmptyContainer>
+            Ops... Nenhum resultado foi encontrado...
+          </EmptyContainer>
+        ) : (
+          <ListWrapper>
+            {filteredMovies.map((movie, index) => {
+              return (
+                <MovieCard
+                  key={index}
+                  imgSrc={movie.img}
+                  imgAlt={movie.alt}
+                  movieName={movie.name}
+                />
+              );
+            })}
+          </ListWrapper>
+        )}
       </Wrapper>
     </>
   );
