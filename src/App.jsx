@@ -1,17 +1,18 @@
 import Home from "./pages/Home/Home";
 import * as Routers from "./constants/routes/routes";
 import { Route, Routes } from "react-router-dom";
-import Login from "./pages/Login/Login";
 import { Theme } from "./theme/Theme.styled";
+import { UseAuthProvider } from "./context/AuthContext";
 
 const App = () => {
   return (
+    <UseAuthProvider>
       <Theme>
         <Routes>
           <Route path={Routers.HOME} element={<Home />} exact />
-          <Route path={Routers.LOGIN} element={<Login />} />
         </Routes>
       </Theme>
+    </UseAuthProvider>
   );
 };
 

@@ -3,9 +3,10 @@ import Header from "../../components/Header/Header";
 import MovieCard from "../../components/Card/Movie-Card";
 import { Wrapper, ListWrapper, EmptyContainer } from "./home.styles";
 import { filterList } from "../../utils/filter-list";
+import { useAuthContext } from "../../context/AuthContext";
 
 function Home() {
-  const [searchField, setSearchField] = useState("");
+  const {searchField} = useAuthContext("");
   const [movieList, setMovieList] = useState([]);
 
   useEffect(() => {
