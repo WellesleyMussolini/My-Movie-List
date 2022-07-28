@@ -2,11 +2,9 @@ import React, { useState } from "react";
 import Sidebar from "../../components/Sidebar/Sidebar";
 import { Container, HamburguerIcon } from "./header.styles";
 import InputSearch from "../../components/Input-search/Input-search";
-import { useAuthContext } from "../../context/AuthContext";
 
-const Header = () => {
+const Header = ({inputSearch, setInputSearch}) => {
     const [openSidebar, setOpenSidebar] = useState(false);
-    const {searchField, setSearchField} = useAuthContext("");
     return (
         <Container>
             <HamburguerIcon onClick={() => setOpenSidebar(true)} />
@@ -14,7 +12,7 @@ const Header = () => {
                 openSidebar={openSidebar}
                 handleClose={() => setOpenSidebar(false)}
             />
-            <InputSearch handleOnChange={event => setSearchField(event.target.value)} textField={searchField} />
+            <InputSearch handleOnChange={event => setInputSearch(event.target.value)} textField={inputSearch} />
         </Container>
     )
 };
