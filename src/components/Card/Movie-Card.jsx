@@ -5,7 +5,7 @@ import Button from "@mui/material/Button";
 import Tooltip from '@mui/material/Tooltip';
 
 //Styles
-import { CardImage, CardWrapper, BoxWrapper, MovieTitle, MovieTitleHover } from "./movie-card.styles";
+import { CardImage, CardWrapper, BoxWrapper, MovieTitle } from "./movie-card.styles";
 
 export default function MovieCard({ imgSrc, imgAlt, movieName }) {
   return (
