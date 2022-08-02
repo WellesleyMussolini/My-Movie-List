@@ -3,43 +3,32 @@ import Header from "../../components/Header/Header";
 import MovieCard from "../../components/Card/Movie-Card";
 import { Wrapper, ListWrapper, EmptyContainer } from "./home.styles";
 import { filterList } from "../../utils/filter-list";
+import { getTopRatedMovies } from "../../services/movies";
 
 function Home() {
   const [searchField, setSearchField] = useState("");
-
   const [movieList, setMovieList] = useState([]);
 
   useEffect(() => {
     const movieCatalog = [
       {
-        img: "https://wallpaperaccess.com/full/442474.jpg",
+        poster_path: "https://wallpaperaccess.com/full/442474.jpg",
         alt: "Batman",
-        name: "Batman: O Cavaleiro das Trevas - 2008",
-      },
-      {
-        img: "https://wallpaperaccess.com/full/442474.jpg",
-        alt: "Batman",
-        name: "Batman: O Cavaleiro das Trevas - 2008",
-      },
-      {
-        img: "https://wallpaperaccess.com/full/442474.jpg",
-        alt: "Batman",
-        name: "Batman: O Cavaleiro das Trevas - 2008",
-      },
-      {
-        img: "https://wallpaperaccess.com/full/442474.jpg",
-        alt: "Batman",
-        name: "Batman: O Cavaleiro das Trevas - 2008",
-      },
-    ];
-    setMovieList(movieCatalog);
+        title: "Batman: O Cavaleiro das Trevas - 2008",
+      }];
+
+    const data = getTopRatedMovies("movie", "top_rated", 1);
+    data.then(resp => {
+      // setMovieList(resp.data.results);
+    });
+    setMovieList(movieCatalog); //apagar essa linha no futuro
   }, []);
 
   const filteredMovies = filterList(searchField, movieList);
 
   return (
     <>
-      <Header inputSearch={searchField} setInputSearch={setSearchField} />
+      <Header inputSearch={searchField} handleTextField={setSearchField} />
       <Wrapper>
         {filteredMovies.length === 0 ? (
           <EmptyContainer>
@@ -51,9 +40,9 @@ function Home() {
               return (
                 <MovieCard
                   key={index}
-                  imgSrc={movie.img}
+                  imgSrc={movie.poster_path}
                   imgAlt={movie.alt}
-                  movieName={movie.name}
+                  movieName={movie.title}
                 />
               );
             })}

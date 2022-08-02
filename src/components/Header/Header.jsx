@@ -3,7 +3,7 @@ import Sidebar from "../../components/Sidebar/Sidebar";
 import { Container, HamburguerIcon } from "./header.styles";
 import InputSearch from "../../components/Input-search/Input-search";
 
-const Header = ({inputSearch, setInputSearch}) => {
+const Header = ({inputSearch, handleTextField}) => {
     const [openSidebar, setOpenSidebar] = useState(false);
     return (
         <Container>
@@ -12,7 +12,7 @@ const Header = ({inputSearch, setInputSearch}) => {
                 openSidebar={openSidebar}
                 handleClose={() => setOpenSidebar(false)}
             />
-            <InputSearch handleOnChange={event => setInputSearch(event.target.value)} textField={inputSearch} />
+            <InputSearch handleOnChange={event => handleTextField(event.target.value)} textField={inputSearch} />
         </Container>
     )
 };
