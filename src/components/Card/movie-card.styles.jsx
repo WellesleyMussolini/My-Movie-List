@@ -3,7 +3,6 @@ import CardMedia from "@mui/material/CardMedia";
 import Card from "@mui/material/Card";
 import { Box } from "@mui/material";
 import Typography from "@mui/material/Typography";
-import Tooltip from '@mui/material/Tooltip';
 
 const ScaleGrow = keyframes`
 0% {
@@ -45,10 +44,6 @@ export const MovieTitle = styled(Typography)({
   whiteSpace: "nowrap",
   overflow: "hidden",
   textOverflow: "ellipsis",
-});
-
-export const MovieTitleHover = styled(Tooltip)({
-  // fontSize: "30px"
 });
 
 export const CardImage = styled(CardMedia)({});
