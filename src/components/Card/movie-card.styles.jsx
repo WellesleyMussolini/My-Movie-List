@@ -39,11 +39,12 @@ export const CardWrapper = styled(Card)({
 });
 
 export const MovieTitle = styled(Typography)({
-  textAlign: "center",
-  width: "250px",
-  whiteSpace: "nowrap",
+  display: "-webkit-box",
+  "-webkit-line-clamp": "2",
+  "-webkit-box-orient": "vertical",
   overflow: "hidden",
   textOverflow: "ellipsis",
+  textAlign: "center",
 });
 
 export const CardImage = styled(CardMedia)({});
