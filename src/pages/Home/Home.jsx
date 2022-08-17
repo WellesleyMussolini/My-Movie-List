@@ -7,7 +7,7 @@ import { containsInObject } from "../../utils/contains-in-object";
 import { getTopRatedMovies } from "../../services/movies";
 import { UseMovieContext } from "../../context/movieContext";
 import BasicAlert from "../../components/alert/Basic-Alert";
-import ErrorMessage from "../../components/not-found/error-message";
+import ErrorMessage from "../../components/not-found/Not-Found-Message";
 
 function Home() {
   const [searchField, setSearchField] = useState("");

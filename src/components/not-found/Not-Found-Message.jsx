@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Wrapper } from "./error-message.styles";
+import { Container, Wrapper } from "./not-found-message.styles";
 
 const ErrorMessage = ({ Text }) => {
     return (
