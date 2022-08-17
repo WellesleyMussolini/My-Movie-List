@@ -13,7 +13,7 @@ export const ListSidebar = styled(List)({
 });
 
 export const ListItemStyled = styled(ListItem)({
-  height: "50vh"
+  height: "50vh",
 });
 
 export const HeaderSidebar = styled(Box)({
@@ -36,13 +36,14 @@ export const ListIcon = styled(ListItemIcon)({
   },
   "&.MuiListItemIcon-root": {
     marginRight: "-10px",
-  }
+  },
 });
 
 export const ListName = styled(ListItemText)({
   "& span": {
     fontSize: "16px",
-  }
+    color: "#000000d5",
+  },
 });
 
 export const ListItemButtonStyled = styled(ListItemButton)({

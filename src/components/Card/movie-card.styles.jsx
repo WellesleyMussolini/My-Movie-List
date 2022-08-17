@@ -36,14 +36,21 @@ export const CardWrapper = styled(Card)({
   ":hover": {
     animation: `${ScaleGrow} 0.45s cubic-bezier(0.250, 0.460, 0.450, 0.940) both`,
   },
+
+  "img":{
+    height: "200px",
+    width: "90%",
+    marginLeft: "15px",
+  },
 });
 
 export const MovieTitle = styled(Typography)({
-  display: "-webkit-box",
-  "-webkit-line-clamp": "2",
-  "-webkit-box-orient": "vertical",
+  // display: "-webkit-box",
+  // "-webkit-line-clamp": "2",
+  // "-webkit-box-orient": "vertical",
   overflow: "hidden",
   textOverflow: "ellipsis",
+  whiteSpace: "nowrap",
   textAlign: "center",
 });
 
