@@ -39,7 +39,7 @@ export default function Sidebar({ openSidebar, handleClose }) {
             <AccountIcon />
           </HeaderSidebar>
           {itensSidebar.map((item, index) => (
-            <Link to={item.route} style={{ textDecoration: 'none' }}>
+            <Link to={item.route} style={{ textDecoration: 'none' }} key={index}>
               <ListItem key={index} disablePadding>
                 <ListItemButtonStyled>
                   <ListIcon>{item.icon}</ListIcon>

@@ -5,7 +5,7 @@ import { Wrapper, ListWrapper } from "./favoritedmovies.styles";
 import { filterList } from "../../utils/filter-list";
 import { UseMovieContext } from "../../context/movieContext";
 import BasicAlert from "../../components/alert/Basic-Alert";
-import ErrorMessage from "../../components/not-found/Not-Found-Message";
+import NotFound from "../../components/not-found/Not-Found"
 
 function FavoritedMovies() {
     const [searchField, setSearchField] = useState("");
@@ -28,14 +28,14 @@ function FavoritedMovies() {
             />
             <Wrapper>
                 {filteredMovies.length === 0 ? (
-                    <ErrorMessage Text="Ops... Nenhum resultado foi encontrado..." />
+                    <NotFound Text="Ops... Nenhum resultado foi encontrado..." />
                 ) : (
                     <ListWrapper>
                         {filteredMovies.map((movie, index) => {
                             return (
                                 <MovieCard
                                     key={index}
-                                    isFavorited={false}
+                                    isFavorited={true}
                                     handleAddFavoriteMovie={() => unfavoriteMovie(movie.id)}
                                     imgSrc={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
                                     imgAlt={movie.alt}

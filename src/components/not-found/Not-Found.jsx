@@ -1,7 +1,7 @@
 import React from "react";
-import { Container, Wrapper } from "./not-found-message.styles";
+import { Container, Wrapper } from "./not-found.styles"
 
-const ErrorMessage = ({ Text }) => {
+const NotFound = ({ Text }) => {
     return (
         <Container>
             <Wrapper>
@@ -11,4 +11,4 @@ const ErrorMessage = ({ Text }) => {
     )
 };
 
-export default ErrorMessage;
+export default NotFound;

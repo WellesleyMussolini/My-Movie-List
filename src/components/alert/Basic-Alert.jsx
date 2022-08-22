@@ -35,7 +35,7 @@ const BasicAlert = ({
         <Container spacing={2}>
             <Collapse in={OpenSucessAlert}>
                 <ShowAlert
-                variant="filled"
+                    variant="filled"
                     action={
                         <IconButton
                             aria-label="close"
@@ -47,14 +47,14 @@ const BasicAlert = ({
                             <CloseIcon fontSize="inherit" />
                         </IconButton>
                     }>
-                        <AlertTitle>SUCESS</AlertTitle>
+                    <AlertTitle>SUCESS</AlertTitle>
                     {SucessAlertText}
                 </ShowAlert>
             </Collapse>
 
             <Collapse in={OpenWarnAlert}>
                 <ShowAlert
-                variant="filled"
+                    variant="filled"
                     action={
                         <IconButton
                             aria-label="close"
@@ -67,19 +67,18 @@ const BasicAlert = ({
                         </IconButton>
                     }
                     severity="warning">
-                        <AlertTitle>WARNING</AlertTitle>
+                    <AlertTitle>WARNING</AlertTitle>
                     {WarnAlertText}
                 </ShowAlert>
             </Collapse>
 
             <Collapse in={OpenErrorAlert}>
                 <ShowAlert
-                variant="filled"
+                    variant="filled"
                     action={
                         <IconButton
                             aria-label="close"
                             color="inherit"
-                            size="small"
                             onClick={() => {
                                 HandleErrorAlert(false);
                             }}>

@@ -45,13 +45,11 @@ export const CardWrapper = styled(Card)({
 });
 
 export const MovieTitle = styled(Typography)({
-  // display: "-webkit-box",
-  // "-webkit-line-clamp": "2",
-  // "-webkit-box-orient": "vertical",
   overflow: "hidden",
   textOverflow: "ellipsis",
   whiteSpace: "nowrap",
   textAlign: "center",
+  maxWidth: "320px",
 });
 
 export const CardImage = styled(CardMedia)({});

@@ -21,7 +21,7 @@ export default function MovieCard({ imgSrc, imgAlt, movieName, isFavorited, hand
         </CardContent>
         <CardActions>
             <Button onClick={handleAddFavoriteMovie} size="medium">
-              {isFavorited ? "Adicionar a minha lista" : "Remover da minha lista"}
+               {isFavorited ? "Remover da minha lista" : "Adicionar a minha lista"} 
             </Button>
           <Button size="medium">Sinopse</Button>
         </CardActions>
