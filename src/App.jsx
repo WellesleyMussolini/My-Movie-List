@@ -2,7 +2,7 @@ import Home from "./pages/Home/Home";
 import * as Routers from "./constants/routes/routes";
 import { Route, Routes } from "react-router-dom";
 import { Theme } from "./theme/Theme.styled";
-import { UseMovieProvider } from "./context/movieContext";
+import { UseMovieProvider } from "./context/MovieContext";
 import FavoritedMovies from "./pages/FavoritedMovies/FavoritedMovies";
 
 const App = () => {

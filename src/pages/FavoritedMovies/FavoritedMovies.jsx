@@ -3,7 +3,7 @@ import Header from "../../components/Header/Header";
 import MovieCard from "../../components/Card/Movie-Card";
 import { Wrapper, ListWrapper } from "./favoritedmovies.styles";
 import { filterList } from "../../utils/filter-list";
-import { UseMovieContext } from "../../context/movieContext";
+import { UseMovieContext } from "../../context/MovieContext";
 import BasicAlert from "../../components/alert/Basic-Alert";
 import NotFound from "../../components/not-found/Not-Found"
 

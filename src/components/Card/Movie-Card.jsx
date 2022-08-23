@@ -7,7 +7,7 @@ import Tooltip from '@mui/material/Tooltip';
 //Styles
 import { CardImage, CardWrapper, BoxWrapper, MovieTitle } from "./movie-card.styles";
 
-export default function MovieCard({ imgSrc, imgAlt, movieName, isFavorited, handleAddFavoriteMovie }) {
+export default function MovieCard({ imgSrc, imgAlt, movieName, isFavorited, handleAddFavoriteMovie, handleSinopse }) {
   return (
     <BoxWrapper>
       <CardWrapper>
@@ -20,10 +20,10 @@ export default function MovieCard({ imgSrc, imgAlt, movieName, isFavorited, hand
           </Tooltip>
         </CardContent>
         <CardActions>
-            <Button onClick={handleAddFavoriteMovie} size="medium">
-               {isFavorited ? "Remover da minha lista" : "Adicionar a minha lista"} 
-            </Button>
-          <Button size="medium">Sinopse</Button>
+          <Button onClick={handleAddFavoriteMovie} size="medium">
+            {isFavorited ? "Remover da minha lista" : "Adicionar a minha lista"}
+          </Button>
+          <Button onClick={handleSinopse} size="medium">Sinopse</Button>
         </CardActions>
       </CardWrapper>
     </BoxWrapper>

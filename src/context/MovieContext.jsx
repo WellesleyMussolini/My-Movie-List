@@ -13,6 +13,6 @@ export const UseMovieProvider = ({ children }) => {
 
 export const UseMovieContext = () => {
     const context = useContext(MovieContext);
-    let { favoritedMovies, setFavoritedMovies } = context;
+    const { favoritedMovies, setFavoritedMovies } = context;
     return { favoritedMovies, setFavoritedMovies };
 }

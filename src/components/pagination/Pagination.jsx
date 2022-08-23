@@ -1,6 +1,6 @@
 import React from "react";
 import Pagination from '@mui/material/Pagination';
-import { Container, Wrapper } from "./page-switch.styles"
+import { Container, Wrapper } from "./pagination.styles";
 
 const PageSwitch = ({ HandleCurrentPage, TotalPages }) => {
     return (
