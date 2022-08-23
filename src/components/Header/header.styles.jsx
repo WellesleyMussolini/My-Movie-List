@@ -9,11 +9,6 @@ export const Container = styled(Box)({
     marginBottom: "35px",
 });
 
-export const Wrapper = styled(Box)({
-    display: "flex",
-    flexDirection: "column",
-});
-
 export const HamburguerIcon = styled(MenuIcon)({
     color: "#0000008a",
     cursor: "pointer",
