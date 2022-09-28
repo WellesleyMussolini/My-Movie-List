@@ -30,11 +30,16 @@ function Home({ search, handleSearch }) {
       await data.then((response) => {
         setMovieData(response.data);
         setMovieList(response.data.results);
-      }).finally(() => {
-        setLoading(false);
-      });
+      })
     };
+
+    const latest = movies.getLatest("movie");
+    latest.then((response) => {
+      console.log(response);
+    });
+
     handleGetMovies();
+    setLoading(false);
   }, [pageSwitcher]);
 
   const filteredMovies = filterList(search, movieList);
