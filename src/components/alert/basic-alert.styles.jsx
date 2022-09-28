@@ -4,6 +4,8 @@ import Stack from '@mui/material/Stack';
 
 export const Container = styled(Stack)({
     position: "fixed",
+    top: "5px",
+    left: "100px",
     zIndex: "3",
 });
 

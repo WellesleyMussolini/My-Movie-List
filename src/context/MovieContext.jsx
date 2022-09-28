@@ -4,8 +4,12 @@ const MovieContext = createContext();
 
 export const UseMovieProvider = ({ children }) => {
     const [favoritedMovies, setFavoritedMovies] = useState([]);
+    const [searchField, setSearchField] = useState("");
     return (
-        <MovieContext.Provider value={{ favoritedMovies, setFavoritedMovies }}>
+        <MovieContext.Provider value={{
+            favoritedMovies, setFavoritedMovies,
+            searchField, setSearchField,
+        }}>
             {children}
         </MovieContext.Provider>
     )
@@ -13,6 +17,6 @@ export const UseMovieProvider = ({ children }) => {
 
 export const UseMovieContext = () => {
     const context = useContext(MovieContext);
-    const { favoritedMovies, setFavoritedMovies } = context;
-    return { favoritedMovies, setFavoritedMovies };
+    const { favoritedMovies, setFavoritedMovies, searchField, setSearchField } = context;
+    return { favoritedMovies, setFavoritedMovies, searchField, setSearchField };
 }

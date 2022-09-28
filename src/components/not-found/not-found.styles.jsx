@@ -6,9 +6,10 @@ export const Container = styled(Box)({
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
+    height: "70vh",
 });
 
-export const Wrapper = styled(Typography)({
+export const StyledText = styled(Typography)({
     fontWeight: 800,
     fontSize: "1.5em",
     textTransform: "uppercase",

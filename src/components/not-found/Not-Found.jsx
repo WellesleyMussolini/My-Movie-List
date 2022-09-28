@@ -1,12 +1,10 @@
 import React from "react";
-import { Container, Wrapper } from "./not-found.styles"
+import { Container, StyledText } from "./not-found.styles"
 
 const NotFound = ({ Text }) => {
     return (
         <Container>
-            <Wrapper>
-                {Text}
-            </Wrapper>
+            <StyledText>{Text}</StyledText>
         </Container>
     )
 };
