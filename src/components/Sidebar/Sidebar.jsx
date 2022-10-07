@@ -27,7 +27,7 @@ export default function Sidebar({ openSidebar, handleClose }) {
     {
       label: "Lançamentos",
       icon: <LocalMoviesIcon />,
-      route: "/",
+      route: "/latest-movies",
     },
   ];
 

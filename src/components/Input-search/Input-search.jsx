@@ -1,6 +1,6 @@
 import React from "react";
 import InputAdornment from '@mui/material/InputAdornment';
-import { InputText, SearchIconStyled } from "./input-search-styled.jsx";
+import { InputText, SearchIconStyled } from "./input-search.styled.jsx";
 
 const InputSearch = ({ handleOnChange, textField }) => {
     return (

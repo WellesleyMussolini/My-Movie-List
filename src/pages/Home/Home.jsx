@@ -8,7 +8,6 @@ import { UseMovieContext } from "../../context/MovieContext";
 import BasicAlert from "../../components/alert/Basic-Alert";
 import NotFound from "../../components/not-found/Not-Found"
 import Pagination from "../../components/pagination/Pagination";
-import { handlePageSwitch } from "../../utils/handle-page-switch";
 import CircularProgress from '@mui/material/CircularProgress';
 import { useNavigate } from "react-router-dom";
 
@@ -58,6 +57,10 @@ function Home({ search, handleSearch }) {
     navigate("/details", { state: { movieId } });
   };
 
+  const HandlePageSwitch = (buttonTAG, pageNumber) => {
+    return setPageSwitcher(pageNumber);
+  }
+
   return (
     <>
       <BasicAlert
@@ -93,9 +96,11 @@ function Home({ search, handleSearch }) {
       {
         filteredMovies.length !== 0
         &&
-        <Pagination HandleCurrentPage={(page) =>
-          handlePageSwitch(page, movieData, setPageSwitcher, pageSwitcher)}
-          TotalPages={movieData.total_pages} />
+        <Pagination
+          TotalPages={movieData.total_pages}
+          Pages={pageSwitcher}
+          HandleCurrentPage={HandlePageSwitch}
+        />
       }
     </>
   );

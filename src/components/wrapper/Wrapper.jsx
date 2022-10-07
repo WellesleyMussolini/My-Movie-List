@@ -15,7 +15,10 @@ const Wrapper = ({ search, handleSearch, showInputSearch, children }) => {
                 />
                 {
                     showInputSearch &&
-                    <Header inputSearch={search} handleTextField={handleSearch} />
+                    <Header
+                        inputSearch={search}
+                        handleTextField={handleSearch}
+                    />
                 }
             </Head>
             <Content>

@@ -2,11 +2,16 @@ import React from "react";
 import Pagination from '@mui/material/Pagination';
 import { Container, Wrapper } from "./pagination.styles";
 
-const PageSwitch = ({ HandleCurrentPage, TotalPages }) => {
+const PageSwitch = ({ HandleCurrentPage, Pages, TotalPages }) => {
     return (
         <Container>
             <Wrapper spacing={2}>
-                <Pagination onClick={HandleCurrentPage} count={TotalPages} color="primary" />
+                <Pagination
+                    count={TotalPages}
+                    color="primary"
+                    page={Pages}
+                    onChange={HandleCurrentPage}
+                />
             </Wrapper>
         </Container>
     )
